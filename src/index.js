@@ -1,11 +1,11 @@
-// import a from './a';
 import express from 'express';
 import config from './config/config';
+import { testAdd } from './decoratorTest/geek.decorator';
 
 const app = express();
 
 app.get('/', (req, res) => {
-    debugger
+    testAdd()
     res.send({ success: "true" });
 });
 
